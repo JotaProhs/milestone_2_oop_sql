@@ -17,7 +17,7 @@ class DatabaseConnection:
 
     def __enter__(self) -> tuple[sqlite3.Connection, sqlite3.Cursor]:
         """
-        creates the connection and the cursor object.
+        creates and returns the connection and the cursor object.
         :return: a tuple containing both objects created.
         """
         self.connection = sqlite3.connect(self.host)
